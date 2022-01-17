@@ -47,13 +47,13 @@ Ireland.
 
 # Inputs
 
-<b> For recurrence </b>: 
+<b> For recurrence: </b>
 
-<b> For functional impact </b>:
+<b> For functional impact: </b>
 
 
 # Outputs 
 
-<b> For recurrence </b>: 
+<b> For recurrence: </b>
 
-<b> For functional impact </b>: 
+<b> For functional impact: </b>
