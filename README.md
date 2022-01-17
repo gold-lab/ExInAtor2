@@ -34,3 +34,26 @@ Ireland.
 11.School of Human Sciences, University of Western Australia, Crawley, Western Australia, Australia.
 
 \*Equal contribution
+
+# Description 
+
+# Requirements 
+
+# Installation 
+
+1. Download all files from Github Repository 
+
+2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0)
+
+# Inputs
+
+<b> For recurrence </b>: 
+
+<b> For functional impact </b>:
+
+
+# Outputs 
+
+<b> For recurrence </b>: 
+
+<b> For functional impact </b>: 
