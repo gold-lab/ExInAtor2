@@ -67,11 +67,64 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 <b> For recurrence: </b>
 
+Mandatory arguments: 
+
+-i <--input_file>: Input file with mutations (SNVs) in BED format
+
+-o <--output_folder>: Path to folder where all output files will be stored
+
+-f <--fasta_file>: FASTA file of the human genome
+
+-g <--gtf_file>: Path to GTF containing lncRNAs
+
+-t <--true_set>: Path to true set of cancer-driver lncRNAs (in this case from the CLC)
+
+-k <--kmers_file>: Txt file containing all the possible trinucleotides.
+
+-z <--chr_sizes>: Two column file with name and lengh of the chromosomes. These lengths have to match the ones in the FASTA file indicated previously
+
+-y <--chr_sizes_long>: Two column file with name, start and end of the chromosomes. These lengths have to match the ones in the FASTA file indicated previously
+
+-w <--whole_genome>: Path to whole genome GTF
+
+Optional arguments: 
+
+-b <--background_size>: the extension length of the background region that includes all introns
+
+-s <--simulations>: Number of iterations to perform simulations, 10000 recommended
+
+-c <--cores>: Number of cores in the computer to use for the simulations
+
+-r <--reg_regions>: 
+
+-e <--exc_regions>: BED file with regions from the genome to ignore (such as those with low mappability, high repetitive sequences, etc)
 
 
 <b> For functional impact: </b>
 
+Mandatory arguments: 
 
+-m <--mutations>: Input file with mutations (SNVs) in BED format
+
+-o <--output_folder>: Path to folder where all output files will be stored
+
+-f <--fasta_file>: FASTA file of the human genome
+
+-g <--gtf_file>: GTF file of the Gencode annotation to use when creating exons
+
+-z <--chr_sizes>: Two column file with name and lengh of the chromosomes. These lengths have to match the ones in the FASTA file indicated previously
+
+-s <--scores_file>: TSV file with scores having these five columns: #Chr    Pos     Ref     Alt     RawScore        PHRED
+
+Optional arguments:
+
+-i <--iterations>: Number of iterations to perform simulations, 10000 recommended
+
+-c <--cores>: Number of cores in the computer to use for the simulations
+
+-t <--true_set>: This is a TXT file with ENSGs of your true positives genes, that will be used in the R script.
+
+-e <--exc_regions>: BED file with regions from the genome to ignore (such as those with low mappability, high repetitive sequences, etc)
 
 # Outputs 
 
@@ -79,11 +132,15 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 The output files for recurrence are stored in Output_REC. Several intermediary files will be generated. The output files included in the repository are:
 
-1. QQplot - 
+1. QQplot
 
-2. Gene List - The final output containing the p-vals and q-vals of input genes. 
+2. Venn Daigram 
 
-3. 
+3. Precision plot 
+
+4. "results_Biliary-AdenoCA_fixed2_10000_100_12.txt" - The final output containing the p-vals and q-vals of input genes. 
+
+5. "table_probabilities_R.txt" - R table with probabilies.
 
 <b> For functional impact: </b>
 
