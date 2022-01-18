@@ -37,7 +37,10 @@ Ireland.
 
 # Description 
 
+ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.com/alanzos/ExInAtor). 
+
 # Requirements 
+
 
 # Installation 
 
@@ -45,7 +48,7 @@ Ireland.
 
 2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0)
 
-3. Download CADD scores for hg19 from here
+3. Download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi)
 
 4. <b> For recurrence: </b>
 
@@ -55,20 +58,11 @@ Ireland.
 
 <b> For recurrence: </b>
 
-python /home/Exinator2/recurrence_script_main.py -b 10000 -f /home/Exinator2/Inputs/Genome_v19.fasta \
--o /home/Exinator2/Output_REC -g /home/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -i /home/Exinator2/Inputs/Biliary-AdenoCA.bed \
--k /home/Exinator2/Inputs/3mers.txt -w /home/Exinator2/Inputs/gencode.v19.annotation.gtf -z /home/Exinator2/Inputs/chromosomes_tab.bed \
--t /home/Exinator2/Inputs/CLC2_final_extended.txt -y /home/Exinator2/Inputs/chromosomes_long_tab.bed -e /home/Exinator2/Inputs/black_list_regions_final.bed -s 100
+python /home/Exinator2/recurrence_script_main.py -b 10000 -f /home/Exinator2/Inputs/Genome_v19.fasta -o /home/Exinator2/Output_REC -g /home/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -i /home/Exinator2/Inputs/Biliary-AdenoCA.bed -k /home/Exinator2/Inputs/3mers.txt -w /home/Exinator2/Inputs/gencode.v19.annotation.gtf -z /home/Exinator2/Inputs/chromosomes_tab.bed -t /home/Exinator2/Inputs/CLC2_final_extended.txt -y /home/Exinator2/Inputs/chromosomes_long_tab.bed -e /home/Exinator2/Inputs/black_list_regions_final.bed -s 100
 
 <b> For functional impact: </b>
 
-python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 \
--m /home/Exinator2/Inputs/Biliary-AdenoCA.bed -o /home/Exinator2/Output_FI \
--g /home/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf \
--f /home/Exinator2/Inputs/Genome_v19.fasta -z /home/Exinator2/Inputs/chromosomes_tab.bed \
--s /home/Exinator2/Inputs/whole_genome_SNVs.tsv.gz -t /home/Exinator2/Inputs/CLC2_final_extended.txt \
--e /home/Exinator2/Inputs/black_list_regions_final.bed
-
+python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exinator2/Inputs/Biliary-AdenoCA.bed -o /home/Exinator2/Output_FI -g /home/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -f /home/Exinator2/Inputs/Genome_v19.fasta -z /home/Exinator2/Inputs/chromosomes_tab.bed -s /home/Exinator2/Inputs/whole_genome_SNVs.tsv.gz -t /home/Exinator2/Inputs/CLC2_final_extended.txt -e /home/Exinator2/Inputs/black_list_regions_final.bed
 
 # Outputs 
 
