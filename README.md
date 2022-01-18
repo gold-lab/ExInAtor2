@@ -41,6 +41,11 @@ ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.
 
 # Requirements 
 
+Python 
+
+R
+
+Bedtools 
 
 # Installation 
 
@@ -48,13 +53,7 @@ ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.
 
 2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0)
 
-3. Download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi)
-
-4. <b> For recurrence: </b>
-
-5. <b> For functional impact: </b>
-
-# Inputs
+3. <b> For running functional impact script,</b> download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi) 
 
 <b> For recurrence: </b>
 
@@ -64,8 +63,28 @@ python /home/Exinator2/recurrence_script_main.py -b 10000 -f /home/Exinator2/Inp
 
 python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exinator2/Inputs/Biliary-AdenoCA.bed -o /home/Exinator2/Output_FI -g /home/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -f /home/Exinator2/Inputs/Genome_v19.fasta -z /home/Exinator2/Inputs/chromosomes_tab.bed -s /home/Exinator2/Inputs/whole_genome_SNVs.tsv.gz -t /home/Exinator2/Inputs/CLC2_final_extended.txt -e /home/Exinator2/Inputs/black_list_regions_final.bed
 
+# Inputs
+
+<b> For recurrence: </b>
+
+
+
+<b> For functional impact: </b>
+
+
+
 # Outputs 
 
 <b> For recurrence: </b>
 
+The output files for recurrence are stored in Output_REC. Several intermediary files will be generated. The output files included in the repository are:
+
+1. QQplot - 
+
+2. Gene List - The final output containing the p-vals and q-vals of input genes. 
+
+3. 
+
 <b> For functional impact: </b>
+
+Same as above, only the output will be stored in the folder Output_FI. 
