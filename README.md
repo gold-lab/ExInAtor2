@@ -42,38 +42,39 @@ ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.
 # Requirements 
 
 <b> For recurrence </b>
+---
 
-*Python*
+Python
 ---
 Tested on python version 3.6.13
 
 *Python packages required:* regex (tested on version 2016.06.24), numpy (tested on version 1.19.5)
 
-*R*
+R
 ---
 Tested on R version 3.5.1
 
-*Bedtools*
+Bedtools
 ---
 Tested on Bedtools version 2.29.2
 
 <b> For functional impact </b>
-
-*Python*
+---
+Python
 ---
 Tested on python version 3.6.13/3.7.2
 
 *Python packages required:* regex (tested on version 2016.06.24), numpy (tested on version 1.19.5), pytabix (tested on version 0.1)
 
-*R*
+R
 ---
 Tested on R version 3.5.1
 
-*Bedtools*
+Bedtools
 ---
 Tested on Bedtools version 2.29.2/2.26.0
 
-*EPACTS*
+EPACTS
 ---
 Tested on version 3.4.2
 
