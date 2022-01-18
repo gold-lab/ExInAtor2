@@ -37,34 +37,21 @@ Ireland.
 
 # Description 
 
-ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.com/alanzos/ExInAtor). 
+ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.com/alanzos/ExInAtor).
+
+ExInAtor2 detects positive selection using the following two signatures:
+
+1. Recurrence (RE) that compares the exonic mutation rate to that of the local background
+
+2. Functional impact (FI), that compares estimated functional impact of mutations to background, both in exonic regions. 
 
 # Requirements 
 
-<b> For recurrence </b>
----
-
-Python
----
-Tested on python version 3.6.13
-
-*Python packages required:* regex (tested on version 2016.06.24), numpy (tested on version 1.19.5)
-
-R
----
-Tested on R version 3.5.1
-
-Bedtools
----
-Tested on Bedtools version 2.29.2
-
-<b> For functional impact </b>
----
 Python
 ---
 Tested on python version 3.6.13/3.7.2
 
-*Python packages required:* regex (tested on version 2016.06.24), numpy (tested on version 1.19.5), pytabix (tested on version 0.1)
+*Python packages required:* regex (tested on version 2016.06.24), numpy (tested on version 1.19.5), pytabix (required only for functional impact, tested on version 0.1)
 
 R
 ---
@@ -74,7 +61,7 @@ Bedtools
 ---
 Tested on Bedtools version 2.29.2/2.26.0
 
-EPACTS
+EPACTS (for functional impact only)
 ---
 Tested on version 3.4.2
 
@@ -98,7 +85,7 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 <b> For recurrence: </b>
 
-<u> Mandatory arguments: </u>
+*Mandatory arguments:*
 
 -i <--input_file>: Input file with mutations (SNVs) in BED format
 
@@ -106,34 +93,32 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 -f <--fasta_file>: FASTA file of the human genome
 
--g <--gtf_file>: Path to GTF containing lncRNAs
+-g <--gtf_file>: Path to Gencode GTF containing information only on long non-coding RNAs. 
 
--t <--true_set>: Path to true set of cancer-driver lncRNAs (in this case from the CLC)
+-t <--true_set>: Path to true set of cancer-driver lncRNAs (in this case from the [CLC](https://academic.oup.com/narcancer/article/3/2/zcab013/6225859))
 
 -k <--kmers_file>: Txt file containing all the possible trinucleotides.
 
 -z <--chr_sizes>: Two column file with name and lengh of the chromosomes. These lengths have to match the ones in the FASTA file indicated previously
 
--y <--chr_sizes_long>: Two column file with name, start and end of the chromosomes. These lengths have to match the ones in the FASTA file indicated previously
+-y <--chr_sizes_long>: Three column file with name, start and end of the chromosomes. These lengths have to match the ones in the FASTA file indicated previously
 
--w <--whole_genome>: Path to whole genome GTF
+-w <--whole_genome>: Path to Gencode GTF containing information about all genes in the genome. 
 
-<u> Optional arguments: </u>
+*Optional arguments:*
 
--b <--background_size>: the extension length of the background region that includes all introns
+-b <--background_size>: The extension length of the background region that includes all introns
 
 -s <--simulations>: Number of iterations to perform simulations, 10000 recommended
 
 -c <--cores>: Number of cores in the computer to use for the simulations
-
--r <--reg_regions>: 
 
 -e <--exc_regions>: BED file with regions from the genome to ignore (such as those with low mappability, high repetitive sequences, etc)
 
 
 <b> For functional impact: </b>
 
-<u> Mandatory arguments: </u>
+*Mandatory arguments:*
 
 -m <--mutations>: Input file with mutations (SNVs) in BED format
 
@@ -147,13 +132,13 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 -s <--scores_file>: TSV file with scores having these five columns: #Chr    Pos     Ref     Alt     RawScore        PHRED
 
-<u> Optional arguments: </u>
+*Optional arguments:*
 
 -i <--iterations>: Number of iterations to perform simulations, 10000 recommended
 
 -c <--cores>: Number of cores in the computer to use for the simulations
 
--t <--true_set>: This is a TXT file with ENSGs of your true positives genes, that will be used in the R script.
+-t <--true_set>: This is a TXT file with ENSGs of your true positives genes, that will be used in the R script, from the [CLC](https://academic.oup.com/narcancer/article/3/2/zcab013/6225859). 
 
 -e <--exc_regions>: BED file with regions from the genome to ignore (such as those with low mappability, high repetitive sequences, etc)
 
@@ -163,11 +148,11 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 The output files for recurrence are stored in Output_REC. Several intermediary files will be generated. The output files included in the repository are:
 
-1. QQplot
+1. qqplot.png: QQplot of the expected and observed pvalues
 
-2. Venn Daigram 
+2. venn.png: Venn Diagram of all genes and genes in the true positive set. 
 
-3. Precision plot 
+3. precision.png: Plot with genes ranked by p value on the x axis and percentage of genes in the true set on the y axis
 
 4. "results_Biliary-AdenoCA_fixed2_10000_100_12.txt" - The final output containing the p-vals and q-vals of input genes. 
 
