@@ -41,11 +41,41 @@ ExInAtor2 is an improvement of ExinAtor that can be [found here](https://github.
 
 # Requirements 
 
-Python 
+<b> For recurrence </b>
 
-R
+<u> Python </u>
 
-Bedtools 
+Tested on python version 3.6.13
+
+Python packages required: regex (tested on version 2016.06.24), numpy (tested on version 1.19.5)
+
+<u> R </u>
+
+Tested on R version 3.5.1
+
+<u> Bedtools </u>
+
+Tested on Bedtools version 2.29.2
+
+<b> For functional impact </b>
+
+<u> Python </u>
+
+Tested on python version 3.6.13/3.7.2
+
+Python packages required: regex (tested on version 2016.06.24), numpy (tested on version 1.19.5), pytabix (tested on version 0.1)
+
+<u> R </u>
+
+Tested on R version 3.5.1
+
+<u> Bedtools </u>
+
+Tested on Bedtools version 2.29.2/2.26.0
+
+<u> EPACTS </u>
+
+Tested on version 3.4.2
 
 # Installation 
 
@@ -53,7 +83,7 @@ Bedtools
 
 2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0)
 
-3. <b> For running functional impact script,</b> download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi) 
+3. <u> For running functional impact script,</u> download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi) 
 
 <b> For recurrence: </b>
 
@@ -67,7 +97,7 @@ python /home/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m /home/Exin
 
 <b> For recurrence: </b>
 
-Mandatory arguments: 
+<u> Mandatory arguments: </u>
 
 -i <--input_file>: Input file with mutations (SNVs) in BED format
 
@@ -87,7 +117,7 @@ Mandatory arguments:
 
 -w <--whole_genome>: Path to whole genome GTF
 
-Optional arguments: 
+<u> Optional arguments: </u>
 
 -b <--background_size>: the extension length of the background region that includes all introns
 
@@ -102,7 +132,7 @@ Optional arguments:
 
 <b> For functional impact: </b>
 
-Mandatory arguments: 
+<u> Mandatory arguments: </u>
 
 -m <--mutations>: Input file with mutations (SNVs) in BED format
 
@@ -116,7 +146,7 @@ Mandatory arguments:
 
 -s <--scores_file>: TSV file with scores having these five columns: #Chr    Pos     Ref     Alt     RawScore        PHRED
 
-Optional arguments:
+<u> Optional arguments: </u>
 
 -i <--iterations>: Number of iterations to perform simulations, 10000 recommended
 
