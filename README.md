@@ -69,7 +69,7 @@ Tested on version 3.4.2
 
 1. Download all files from Github Repository 
 
-2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0)
+2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0). <b> If running on FASTA files from other sources, make sure it is unmasked (no soft-masked, or hard-masked). </b>
 
 3. *For running functional impact script,* download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi) 
 
