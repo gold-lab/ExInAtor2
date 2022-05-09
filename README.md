@@ -71,10 +71,12 @@ Tested on version 3.4.2
 
 2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0). <b> If running on FASTA files from other sources, make sure it is unmasked (no soft-masked or hard-masked). </b>
 
-3. *For running functional impact script,* download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi) 
+3. 
 
-4. Input files are stored as .zip files to reduce size. Make sure to uncompress them before running ExInAtor2 on it. 
+4. *For running functional impact script,* download CADD scores for hg19 [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz) and its index [from here](https://krishna.gs.washington.edu/download/CADD/v1.6/GRCh38/whole_genome_SNVs.tsv.gz.tbi) 
 
+5. Some Input files are stored as .zip files to reduce size. Make sure to uncompress them before running ExInAtor2 on it (for example, Biliary_AdenoCA.bed.zip, black_list_regions_final.bed.zip, gencode.v19.long_noncoding_RNAs.gtf.zip) 
+ 
 <b> For recurrence: </b>
 
 python ~/Exinator2/recurrence_script_main.py -b 10000 -f ~/Exinator2/Inputs/Genome_v19.fasta -o ~/Exinator2/Output_REC -g ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -i ~/Exinator2/Inputs/Biliary-AdenoCA.bed -k ~/Exinator2/Inputs/3mers.txt -w ~/Exinator2/Inputs/gencode.v19.annotation.gtf -z ~/Exinator2/Inputs/chromosomes_tab.bed -t ~/Exinator2/Inputs/CLC2_final_extended.txt -y ~/Exinator2/Inputs/chromosomes_long_tab.bed -e ~/Exinator2/Inputs/black_list_regions_final.bed -s 100
