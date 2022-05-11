@@ -71,7 +71,7 @@ Estimated time for installation will greatly vary on your network speed and on w
 
 1. Download all files from Github Repository 
 
-2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0). <b> If running on FASTA files from other sources, make sure it is unmasked (no soft-masked or hard-masked). </b>
+2. Download FASTA for hg19 [from here](https://www.dropbox.com/s/a6vthezotm6iaih/Genome_v19.fasta.gz?dl=0). <b> If running on FASTA files from other sources, make sure it is unmasked and follows the ENSEMBL FASTA format (UCSC will throw errors as the chromosomes are named differently). </b>
 
 3. Download comprehensive gene annotation V19 (GRCh37 for the test input to work) [from here](https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_19/gencode.v19.annotation.gtf.gz). (Filtered Long non-coding RNA GTF provided in the input folder, however the comprehensive gene annotation must be downloaded.) 
 
@@ -174,7 +174,7 @@ gunzip -c ~/Genome_v19.fasta.gz > ~/Genome_v19.fasta
 
 2. Make sure to download additional files mentioned in the Installation section (Genome fasta file "Genome_v19.fasta", CADD score file for functional impact: whole_genome_SNVs.tsv.gz)
 
-3. Full paths are required when running ExInAtor
+3. <b> Full paths are required when running ExInAtor </b>
 
 <b> For recurrence: </b>
 
