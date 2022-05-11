@@ -164,11 +164,11 @@ Same as above, only the output will be stored in the folder Output_FI.
 
 1. Unzip .bed, .fasta and .gtf files before running command: 
 
-gunzip -c ~/Exinator2/Inputs/Biliary-AdenoCA.bed.zip > ~/Exinator2/Inputs/Biliary-AdenoCA.bed
+unzip -c ~/Exinator2/Inputs/Biliary-AdenoCA.bed.zip > ~/Exinator2/Inputs/Biliary-AdenoCA.bed
 
-gunzip -c ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf.zip > ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf
+unzip -c ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf.zip > ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf
 
-gunzip -c ~/gencode.v19.annotation.gtf.zip > ~/gencode.v19.annotation.gtf
+unzip -c ~/gencode.v19.annotation.gtf.zip > ~/gencode.v19.annotation.gtf
 
 gunzip -c ~/Genome_v19.fasta.gz > ~/Genome_v19.fasta
 
