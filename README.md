@@ -162,6 +162,20 @@ Same as above, only the output will be stored in the folder Output_FI.
 
 # Example
 
+1. Unzip .bed, .fasta and .gtf files before running command: 
+
+gunzip -c ~/Exinator2/Inputs/Biliary-AdenoCA.bed.zip > ~/Exinator2/Inputs/Biliary-AdenoCA.bed
+
+gunzip -c ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf.zip > ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf
+
+gunzip -c ~/gencode.v19.annotation.gtf.zip > ~/gencode.v19.annotation.gtf
+
+gunzip -c ~/Genome_v19.fasta.gz > ~/Genome_v19.fasta
+
+2. Make sure to download additional files mentioned in the Installation section (Genome fasta file "Genome_v19.fasta", CADD score file for functional impact: whole_genome_SNVs.tsv.gz)
+
+3. Full paths are required when running ExInAtor
+
 <b> For recurrence: </b>
 
 python ~/Exinator2/recurrence_script_main.py -b 10000 -f ~/Exinator2/Inputs/Genome_v19.fasta -o ~/Exinator2/Output_REC -g ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -i ~/Exinator2/Inputs/Biliary-AdenoCA.bed -k ~/Exinator2/Inputs/3mers.txt -w ~/Exinator2/Inputs/gencode.v19.annotation.gtf -z ~/Exinator2/Inputs/chromosomes_tab.bed -t ~/Exinator2/Inputs/CLC2_final_extended.txt -y ~/Exinator2/Inputs/chromosomes_long_tab.bed -e ~/Exinator2/Inputs/black_list_regions_final.bed -s 100
