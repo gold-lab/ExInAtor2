@@ -178,11 +178,11 @@ gunzip -c ~/Genome_v19.fasta.gz > ~/Genome_v19.fasta
 
 <b> For recurrence: </b>
 
-python ~/Exinator2/recurrence_script_main.py -b 10000 -f ~/Genome_v19.fasta -o ~/Exinator2/Output_REC -g ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -i ~/Exinator2/Inputs/Biliary-AdenoCA.bed -k ~/Exinator2/Inputs/3mers.txt -w ~/gencode.v19.annotation.gtf -z ~/Exinator2/Inputs/chromosomes_tab.bed -t ~/Exinator2/Inputs/CLC2_final_extended.txt -y ~/Exinator2/Inputs/chromosomes_long_tab.bed -e ~/Exinator2/Inputs/black_list_regions_final.bed -s 100
+python ~/Exinator2/recurrence_script_main.py -b 10000 -f ~/Genome_v19.fasta -o ~/Exinator2/Output_REC2 -g ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -i ~/Exinator2/Inputs/Biliary-AdenoCA.bed -k ~/Exinator2/Inputs/3mers.txt -w ~/gencode.v19.annotation.gtf -z ~/Exinator2/Inputs/chromosomes_tab.bed -t ~/Exinator2/Inputs/CLC2_final_extended.txt -y ~/Exinator2/Inputs/chromosomes_long_tab.bed -e ~/Exinator2/Inputs/black_list_regions_final.bed -s 100
 
 <b> For functional impact: </b>
 
-python ~/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m ~/Exinator2/Inputs/Biliary-AdenoCA.bed -o ~/Exinator2/Output_FI -g ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -f ~/Genome_v19.fasta -z ~/Exinator2/Inputs/chromosomes_tab.bed -s ~/whole_genome_SNVs.tsv.gz -t ~/Exinator2/Inputs/CLC2_final_extended.txt -e ~/Exinator2/Inputs/black_list_regions_final.bed
+python ~/Exinator2/functionalimpact_script_main.py -c 1 -i 100 -m ~/Exinator2/Inputs/Biliary-AdenoCA.bed -o ~/Exinator2/Output_FI2 -g ~/Exinator2/Inputs/gencode.v19.long_noncoding_RNAs.gtf -f ~/Genome_v19.fasta -z ~/Exinator2/Inputs/chromosomes_tab.bed -s ~/whole_genome_SNVs.tsv.gz -t ~/Exinator2/Inputs/CLC2_final_extended.txt -e ~/Exinator2/Inputs/black_list_regions_final.bed
 
 Estimated runtime for 100 simulations (as stated in the example code on the example input) on a system with 4 cores and 32GB RAM: 
 
