@@ -174,7 +174,7 @@ gunzip -c ~/Genome_v19.fasta.gz > ~/Genome_v19.fasta
 
 2. Make sure to download additional files mentioned in the Installation section (Genome fasta file "Genome_v19.fasta", CADD score file for functional impact: whole_genome_SNVs.tsv.gz)
 
-3. <b> Full paths are required when running ExInAtor </b>
+3. Full paths are required when running ExInAtor
 
 <b> For recurrence: </b>
 
